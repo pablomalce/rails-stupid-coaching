@@ -31,7 +31,7 @@ rails server
 # open http://localhost:3000/ask
 ```
 
-There is no root route, so `/` returns a routing error. The two generated controller tests use route helpers that do not match `config/routes.rb`, so they are not expected to pass as written.
+There is no root route, so `/` returns a routing error. The two generated controller tests use route helpers that do not match `config/routes.rb`, so they are not expected to pass as written. Visiting `/answer` without a `question` parameter raises a `NoMethodError`, because the controller calls `include?` on a nil param.
 
 ## Status
 
